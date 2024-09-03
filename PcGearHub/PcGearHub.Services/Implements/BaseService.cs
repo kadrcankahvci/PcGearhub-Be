@@ -34,9 +34,10 @@ namespace PcGearHub.Services.Implements
             return await _repository.GetAll();
         }
 
-        public IQueryable<T> GetById(int Id)
+        public async Task<T> GetById(int Id)
         {
-            throw new NotImplementedException();
+            var result = await _repository.GetById(Id);
+            return result;
         }
 
         public async Task Update(T entity)

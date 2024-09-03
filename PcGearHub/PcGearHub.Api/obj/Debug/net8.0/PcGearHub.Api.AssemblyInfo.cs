@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PcGearHub.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1b35657436f9a2fc20b9855085d731ae949dd92")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b2ab80cb7e99e0e21b2eb7aa11bff4a5007f2c9")]
 [assembly: System.Reflection.AssemblyProductAttribute("PcGearHub.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PcGearHub.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -9,7 +9,7 @@ namespace PcGearHub.Services.Interfaces
     public interface IBaseService<T> where T : class,new()
     {
         
-        IQueryable<T> GetById(int Id);
+      Task<T> GetById(int Id);
                                                 // GetById
         Task<List<T>> GetAll();                // GetAll
         Task Create(T entity);                // Create
