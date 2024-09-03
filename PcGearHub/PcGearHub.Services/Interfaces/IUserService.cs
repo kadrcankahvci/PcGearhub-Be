@@ -9,5 +9,6 @@ namespace PcGearHub.Services.Interfaces
 {
     public interface IUserService: IBaseService<User>
     {
+
     }
 }

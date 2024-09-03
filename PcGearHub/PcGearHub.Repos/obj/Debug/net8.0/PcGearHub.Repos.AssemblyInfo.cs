@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PcGearHub.Repos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1b35657436f9a2fc20b9855085d731ae949dd92")]
 [assembly: System.Reflection.AssemblyProductAttribute("PcGearHub.Repos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PcGearHub.Repos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

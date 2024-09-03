@@ -10,6 +10,6 @@ namespace PcGearHub.Repos.Interfaces
 {
     public interface IProductRepository : IRepository<Product>
     {
-
+      
     }
 }

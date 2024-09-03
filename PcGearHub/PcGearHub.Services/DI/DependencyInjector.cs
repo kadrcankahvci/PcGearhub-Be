@@ -4,6 +4,8 @@ using PcGearHub.Data.DBModels;
 using PcGearHub.Repos.DI;
 using PcGearHub.Repos.Implements;
 using PcGearHub.Repos.Interfaces;
+using PcGearHub.Services.Implements;
+using PcGearHub.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,27 +17,33 @@ namespace PcGearHub.Services.DI
 {
     public static class ServiceDI
     {
-        
-        
- public static void Init(IServiceCollection services)
-            {
+
+
+        public static void Init(IServiceCollection services)
+        {
             // DbContext konfigürasyonu
 
             // Service konfigürasyonu
 
-            //services.AddScoped<IProductService,ProductSe>();
-            //services.AddScoped<IProductRepository,ProductRepository>();
-            //services.AddScoped<IProductRepository,ProductRepository>();
-            //services.AddScoped<IProductRepository, ProductRepository>();
-            //services.AddScoped<IProductRepository, ProductRepository>();
-            //services.AddScoped<IProductRepository, ProductRepository>();
-            //services.AddScoped<IProductRepository, ProductRepository>();
-            //services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IAddressService, AddressService>();
+            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<ILogHistoryService, LogHistoryService>();
+            services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IOrderItemService, OrderItemService>();
+            services.AddScoped<IPaymentMethodService, PaymentMethodService>();
+            services.AddScoped<IPaymentService, PaymentService>();
+            services.AddScoped<IPermissionService, PermissionService>();
+            services.AddScoped<IProductReviewService, ProductReviewService>();
+            services.AddScoped<IRolePermissionService, RolePermissionService>();
+            services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<IUserRoleService, IUserRoleService>();
             ReposDI.Init(services);
 
             // Diğer servis konfigürasyonları burada yapılabilir
         }
-        }
-    
-    
+    }
+
+
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PcGearHub.Repos.Interfaces
 {
-    internal interface ICategoryRepository : IRepository<Category>
+    public interface ICategoryRepository : IRepository<Category>
     {
     }
 }

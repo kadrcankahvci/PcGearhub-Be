@@ -21,15 +21,21 @@ namespace PcGearHub.Repos.DI
                 // DbContext konfigürasyonu
                
                 // Repository konfigürasyonu
-            services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
+            
             services.AddScoped<IProductRepository,ProductRepository>();
-            services.AddScoped<IProductRepository,ProductRepository>();
-            services.AddScoped<IProductRepository,ProductRepository>();
-            services.AddScoped<IProductRepository, ProductRepository>();
-            services.AddScoped<IProductRepository, ProductRepository>();
-            services.AddScoped<IProductRepository, ProductRepository>();
-            services.AddScoped<IProductRepository, ProductRepository>();
-            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IUserRepository,UserRepository>();
+            services.AddScoped<IAddressRespository, AddressRepositry>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<ILogHistoryRepository, LogHistoryRespository>();
+            services.AddScoped<IOrderRepository,OrderRepository>();
+            services.AddScoped<IOrderItemRepository,OrderItemRepository>();
+            services.AddScoped<IPaymentMethodRepository, PaymentMethodRepository>();
+            services.AddScoped<IPaymentRepository, PaymentRepository>();
+            services.AddScoped<IPermissionRepository, PermissionRepository>();
+            services.AddScoped<IProductReviewRepository, ProductReviewRepository>();
+            services.AddScoped<IRolePermissionRepository, RolePermissionRepository>();
+            services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<IUserRoleRepository, IUserRoleRepository>();
 
             // Diğer servis konfigürasyonları burada yapılabilir
         }

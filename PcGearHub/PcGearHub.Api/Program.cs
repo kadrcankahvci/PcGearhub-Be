@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PcGearHub.Data.DBModels;
-using PcGearHub.Repos.DI;
+using PcGearHub.Services.DI;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 //builder.Services.AddDbContext<DemodbContext>(options =>
 //                   options.UseNpgsql("Persist Security Info=True;Password=changeme;Username=postgres;Database=Demodb;Host=localhost"));
-ReposDI.Init(builder.Services);
+ServiceDI.Init(builder.Services);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

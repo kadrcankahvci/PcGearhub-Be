@@ -3,76 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D88FEBD1-DF08-4428-B262-1600314BF95A}|PcGearHub.Repos\\PcGearHub.Repos.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.repos\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D88FEBD1-DF08-4428-B262-1600314BF95A}|PcGearHub.Repos\\PcGearHub.Repos.csproj|solutionrelative:pcgearhub.repos\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{148B75F7-98E9-4813-8DA9-75BAD0ACB934}|PcGearHub.Data\\PcGearHub.Data.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.data\\dbmodels\\loghistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{148B75F7-98E9-4813-8DA9-75BAD0ACB934}|PcGearHub.Data\\PcGearHub.Data.csproj|solutionrelative:pcgearhub.data\\dbmodels\\loghistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D88FEBD1-DF08-4428-B262-1600314BF95A}|PcGearHub.Repos\\PcGearHub.Repos.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.repos\\implements\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D88FEBD1-DF08-4428-B262-1600314BF95A}|PcGearHub.Repos\\PcGearHub.Repos.csproj|solutionrelative:pcgearhub.repos\\implements\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D88FEBD1-DF08-4428-B262-1600314BF95A}|PcGearHub.Repos\\PcGearHub.Repos.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.repos\\di\\dependencyinjector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D88FEBD1-DF08-4428-B262-1600314BF95A}|PcGearHub.Repos\\PcGearHub.Repos.csproj|solutionrelative:pcgearhub.repos\\di\\dependencyinjector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{148B75F7-98E9-4813-8DA9-75BAD0ACB934}|PcGearHub.Data\\PcGearHub.Data.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.data\\dbmodels\\demodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{148B75F7-98E9-4813-8DA9-75BAD0ACB934}|PcGearHub.Data\\PcGearHub.Data.csproj|solutionrelative:pcgearhub.data\\dbmodels\\demodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D88FEBD1-DF08-4428-B262-1600314BF95A}|PcGearHub.Repos\\PcGearHub.Repos.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.repos\\implements\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D88FEBD1-DF08-4428-B262-1600314BF95A}|PcGearHub.Repos\\PcGearHub.Repos.csproj|solutionrelative:pcgearhub.repos\\implements\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D88FEBD1-DF08-4428-B262-1600314BF95A}|PcGearHub.Repos\\PcGearHub.Repos.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.repos\\implements\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D88FEBD1-DF08-4428-B262-1600314BF95A}|PcGearHub.Repos\\PcGearHub.Repos.csproj|solutionrelative:pcgearhub.repos\\implements\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9521C99D-3BCD-4C6E-B4B3-9DB053E723D3}|PcGearHub.Services\\PcGearHub.Services.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9521C99D-3BCD-4C6E-B4B3-9DB053E723D3}|PcGearHub.Services\\PcGearHub.Services.csproj|solutionrelative:pcgearhub.services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9521C99D-3BCD-4C6E-B4B3-9DB053E723D3}|PcGearHub.Services\\PcGearHub.Services.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9521C99D-3BCD-4C6E-B4B3-9DB053E723D3}|PcGearHub.Services\\PcGearHub.Services.csproj|solutionrelative:pcgearhub.services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9521C99D-3BCD-4C6E-B4B3-9DB053E723D3}|PcGearHub.Services\\PcGearHub.Services.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.services\\implements\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9521C99D-3BCD-4C6E-B4B3-9DB053E723D3}|PcGearHub.Services\\PcGearHub.Services.csproj|solutionrelative:pcgearhub.services\\implements\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{148B75F7-98E9-4813-8DA9-75BAD0ACB934}|PcGearHub.Data\\PcGearHub.Data.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.data\\dbmodels\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{148B75F7-98E9-4813-8DA9-75BAD0ACB934}|PcGearHub.Data\\PcGearHub.Data.csproj|solutionrelative:pcgearhub.data\\dbmodels\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9521C99D-3BCD-4C6E-B4B3-9DB053E723D3}|PcGearHub.Services\\PcGearHub.Services.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9521C99D-3BCD-4C6E-B4B3-9DB053E723D3}|PcGearHub.Services\\PcGearHub.Services.csproj|solutionrelative:pcgearhub.services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5ACAC587-4EE0-4FEC-93FE-AB872CE906C4}|PcGearHub.Api\\PcGearHub.Api.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ACAC587-4EE0-4FEC-93FE-AB872CE906C4}|PcGearHub.Api\\PcGearHub.Api.csproj|solutionrelative:pcgearhub.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9521C99D-3BCD-4C6E-B4B3-9DB053E723D3}|PcGearHub.Services\\PcGearHub.Services.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.services\\implements\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9521C99D-3BCD-4C6E-B4B3-9DB053E723D3}|PcGearHub.Services\\PcGearHub.Services.csproj|solutionrelative:pcgearhub.services\\implements\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9521C99D-3BCD-4C6E-B4B3-9DB053E723D3}|PcGearHub.Services\\PcGearHub.Services.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.services\\interfaces\\ibaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9521C99D-3BCD-4C6E-B4B3-9DB053E723D3}|PcGearHub.Services\\PcGearHub.Services.csproj|solutionrelative:pcgearhub.services\\interfaces\\ibaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D88FEBD1-DF08-4428-B262-1600314BF95A}|PcGearHub.Repos\\PcGearHub.Repos.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.repos\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D88FEBD1-DF08-4428-B262-1600314BF95A}|PcGearHub.Repos\\PcGearHub.Repos.csproj|solutionrelative:pcgearhub.repos\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D88FEBD1-DF08-4428-B262-1600314BF95A}|PcGearHub.Repos\\PcGearHub.Repos.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.repos\\implements\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D88FEBD1-DF08-4428-B262-1600314BF95A}|PcGearHub.Repos\\PcGearHub.Repos.csproj|solutionrelative:pcgearhub.repos\\implements\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D88FEBD1-DF08-4428-B262-1600314BF95A}|PcGearHub.Repos\\PcGearHub.Repos.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.repos\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D88FEBD1-DF08-4428-B262-1600314BF95A}|PcGearHub.Repos\\PcGearHub.Repos.csproj|solutionrelative:pcgearhub.repos\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D88FEBD1-DF08-4428-B262-1600314BF95A}|PcGearHub.Repos\\PcGearHub.Repos.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.repos\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D88FEBD1-DF08-4428-B262-1600314BF95A}|PcGearHub.Repos\\PcGearHub.Repos.csproj|solutionrelative:pcgearhub.repos\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{148B75F7-98E9-4813-8DA9-75BAD0ACB934}|PcGearHub.Data\\PcGearHub.Data.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.data\\dbmodels\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{148B75F7-98E9-4813-8DA9-75BAD0ACB934}|PcGearHub.Data\\PcGearHub.Data.csproj|solutionrelative:pcgearhub.data\\dbmodels\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{148B75F7-98E9-4813-8DA9-75BAD0ACB934}|PcGearHub.Data\\PcGearHub.Data.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.data\\dbmodels\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{148B75F7-98E9-4813-8DA9-75BAD0ACB934}|PcGearHub.Data\\PcGearHub.Data.csproj|solutionrelative:pcgearhub.data\\dbmodels\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5ACAC587-4EE0-4FEC-93FE-AB872CE906C4}|PcGearHub.Api\\PcGearHub.Api.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{5ACAC587-4EE0-4FEC-93FE-AB872CE906C4}|PcGearHub.Api\\PcGearHub.Api.csproj|solutionrelative:pcgearhub.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{5ACAC587-4EE0-4FEC-93FE-AB872CE906C4}|PcGearHub.Api\\PcGearHub.Api.csproj|c:\\users\\kdrcn\\masa\u00FCst\u00FC\\pcgearhub-be\\pcgearhub\\pcgearhub.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ACAC587-4EE0-4FEC-93FE-AB872CE906C4}|PcGearHub.Api\\PcGearHub.Api.csproj|solutionrelative:pcgearhub.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,236 +54,106 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IBaseService.cs",
-              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Services\\Interfaces\\IBaseService.cs",
-              "RelativeDocumentMoniker": "PcGearHub.Services\\Interfaces\\IBaseService.cs",
-              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Services\\Interfaces\\IBaseService.cs",
-              "RelativeToolTip": "PcGearHub.Services\\Interfaces\\IBaseService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Services\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "PcGearHub.Services\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Services\\Interfaces\\IUserService.cs*",
+              "RelativeToolTip": "PcGearHub.Services\\Interfaces\\IUserService.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T14:56:55.694Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Services\\Implements\\ProductService.cs",
-              "RelativeDocumentMoniker": "PcGearHub.Services\\Implements\\ProductService.cs",
-              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Services\\Implements\\ProductService.cs",
-              "RelativeToolTip": "PcGearHub.Services\\Implements\\ProductService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T14:56:06.899Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IProductService.cs",
-              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Services\\Interfaces\\IProductService.cs",
-              "RelativeDocumentMoniker": "PcGearHub.Services\\Interfaces\\IProductService.cs",
-              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Services\\Interfaces\\IProductService.cs",
-              "RelativeToolTip": "PcGearHub.Services\\Interfaces\\IProductService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T14:55:10.653Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Repos\\Implements\\UserRepository.cs",
-              "RelativeDocumentMoniker": "PcGearHub.Repos\\Implements\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Repos\\Implements\\UserRepository.cs",
-              "RelativeToolTip": "PcGearHub.Repos\\Implements\\UserRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T13:48:05.629Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CategoryRepository.cs",
-              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Repos\\Implements\\CategoryRepository.cs",
-              "RelativeDocumentMoniker": "PcGearHub.Repos\\Implements\\CategoryRepository.cs",
-              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Repos\\Implements\\CategoryRepository.cs",
-              "RelativeToolTip": "PcGearHub.Repos\\Implements\\CategoryRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T13:44:59.802Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DemodbContext.cs",
-              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Data\\DBModels\\DemodbContext.cs",
-              "RelativeDocumentMoniker": "PcGearHub.Data\\DBModels\\DemodbContext.cs",
-              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Data\\DBModels\\DemodbContext.cs",
-              "RelativeToolTip": "PcGearHub.Data\\DBModels\\DemodbContext.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAUwDEAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T13:42:18.6Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DependencyInjector.cs",
-              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Repos\\DI\\DependencyInjector.cs",
-              "RelativeDocumentMoniker": "PcGearHub.Repos\\DI\\DependencyInjector.cs",
-              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Repos\\DI\\DependencyInjector.cs",
-              "RelativeToolTip": "PcGearHub.Repos\\DI\\DependencyInjector.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T13:23:56.907Z",
+              "WhenOpened": "2024-09-03T09:44:06.891Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "BaseRepository.cs",
-              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Repos\\Implements\\BaseRepository.cs",
-              "RelativeDocumentMoniker": "PcGearHub.Repos\\Implements\\BaseRepository.cs",
-              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Repos\\Implements\\BaseRepository.cs",
-              "RelativeToolTip": "PcGearHub.Repos\\Implements\\BaseRepository.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAhAAAA",
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Services\\Implements\\ProductService.cs",
+              "RelativeDocumentMoniker": "PcGearHub.Services\\Implements\\ProductService.cs",
+              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Services\\Implements\\ProductService.cs",
+              "RelativeToolTip": "PcGearHub.Services\\Implements\\ProductService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T09:09:56.72Z",
+              "WhenOpened": "2024-09-03T09:22:14.074Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LogHistory.cs",
-              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Data\\DBModels\\LogHistory.cs",
-              "RelativeDocumentMoniker": "PcGearHub.Data\\DBModels\\LogHistory.cs",
-              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Data\\DBModels\\LogHistory.cs",
-              "RelativeToolTip": "PcGearHub.Data\\DBModels\\LogHistory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Services\\Interfaces\\IProductService.cs",
+              "RelativeDocumentMoniker": "PcGearHub.Services\\Interfaces\\IProductService.cs",
+              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Services\\Interfaces\\IProductService.cs",
+              "RelativeToolTip": "PcGearHub.Services\\Interfaces\\IProductService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T13:13:20.037Z",
+              "WhenOpened": "2024-09-03T09:20:51.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BaseService.cs",
+              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Services\\Implements\\BaseService.cs",
+              "RelativeDocumentMoniker": "PcGearHub.Services\\Implements\\BaseService.cs",
+              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Services\\Implements\\BaseService.cs",
+              "RelativeToolTip": "PcGearHub.Services\\Implements\\BaseService.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAkwC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T08:25:54.358Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Repos\\Implements\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "PcGearHub.Repos\\Implements\\BaseRepository.cs",
+              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Repos\\Implements\\BaseRepository.cs",
+              "RelativeToolTip": "PcGearHub.Repos\\Implements\\BaseRepository.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAkwAsAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T09:08:52.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Repos\\Implements\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "PcGearHub.Repos\\Implements\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Repos\\Implements\\ProductRepository.cs*",
+              "RelativeToolTip": "PcGearHub.Repos\\Implements\\ProductRepository.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T09:01:39.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "IProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Repos\\Interfaces\\IProductRepository.cs",
               "RelativeDocumentMoniker": "PcGearHub.Repos\\Interfaces\\IProductRepository.cs",
               "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Repos\\Interfaces\\IProductRepository.cs",
               "RelativeToolTip": "PcGearHub.Repos\\Interfaces\\IProductRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T12:50:22.184Z",
+              "WhenOpened": "2024-09-03T09:01:30.801Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Api\\Program.cs",
               "RelativeDocumentMoniker": "PcGearHub.Api\\Program.cs",
               "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Api\\Program.cs",
               "RelativeToolTip": "PcGearHub.Api\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAaAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-02T12:40:01.302Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "OrderItem.cs",
-              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Data\\DBModels\\OrderItem.cs",
-              "RelativeDocumentMoniker": "PcGearHub.Data\\DBModels\\OrderItem.cs",
-              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Data\\DBModels\\OrderItem.cs",
-              "RelativeToolTip": "PcGearHub.Data\\DBModels\\OrderItem.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T12:20:12.811Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ICategoryRepository.cs",
-              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Repos\\Interfaces\\ICategoryRepository.cs",
-              "RelativeDocumentMoniker": "PcGearHub.Repos\\Interfaces\\ICategoryRepository.cs",
-              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Repos\\Interfaces\\ICategoryRepository.cs",
-              "RelativeToolTip": "PcGearHub.Repos\\Interfaces\\ICategoryRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T12:19:35.443Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Repos\\Implements\\ProductRepository.cs",
-              "RelativeDocumentMoniker": "PcGearHub.Repos\\Implements\\ProductRepository.cs",
-              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Repos\\Implements\\ProductRepository.cs",
-              "RelativeToolTip": "PcGearHub.Repos\\Implements\\ProductRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T11:43:22.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Repos\\Interfaces\\IRepository.cs",
-              "RelativeDocumentMoniker": "PcGearHub.Repos\\Interfaces\\IRepository.cs",
-              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Repos\\Interfaces\\IRepository.cs",
-              "RelativeToolTip": "PcGearHub.Repos\\Interfaces\\IRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T09:02:38.142Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Address.cs",
-              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Data\\DBModels\\Address.cs",
-              "RelativeDocumentMoniker": "PcGearHub.Data\\DBModels\\Address.cs",
-              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Data\\DBModels\\Address.cs",
-              "RelativeToolTip": "PcGearHub.Data\\DBModels\\Address.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAwwBMAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T08:53:42.472Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "PaymentMethod.cs",
-              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Data\\DBModels\\PaymentMethod.cs",
-              "RelativeDocumentMoniker": "PcGearHub.Data\\DBModels\\PaymentMethod.cs",
-              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Data\\DBModels\\PaymentMethod.cs",
-              "RelativeToolTip": "PcGearHub.Data\\DBModels\\PaymentMethod.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T08:49:30.768Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Api\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "PcGearHub.Api\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\kdrcn\\Masa\u00FCst\u00FC\\PcGearhub-Be\\PcGearHub\\PcGearHub.Api\\Properties\\launchSettings.json",
-              "RelativeToolTip": "PcGearHub.Api\\Properties\\launchSettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAiwBoAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-02T08:24:22.498Z",
               "EditorCaption": ""
             }
           ]

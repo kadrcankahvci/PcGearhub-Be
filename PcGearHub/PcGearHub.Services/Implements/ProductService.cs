@@ -15,6 +15,10 @@ namespace PcGearHub.Services.Implements
         {
         }
 
-
+        //public async Task<List<Product>> SearchProduct(string searchTerm)
+        //{
+        //    var allProducts = await GetAll(); // BaseService'den alınır
+        //    return allProducts.Where(p => p.Name.Contains(searchTerm) || p.Description.Contains(searchTerm)).ToList();
+        //}
     }
 }

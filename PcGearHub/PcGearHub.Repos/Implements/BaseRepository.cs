@@ -9,7 +9,7 @@ using PcGearHub.Data;
 
 namespace PcGearHub.Repos.Implements
 {
-    public class BaseRepository<T> : IRepository<T> where T : class, new()
+    public class BaseRepository<T> : IRepository<T> where T : class , new()
     {
         protected readonly DbContext _context;
         protected readonly DbSet<T> _dbSet;
@@ -36,15 +36,15 @@ namespace PcGearHub.Repos.Implements
             }
         }
 
+
         public async Task<List<T>> GetAll()
         {
             return await _dbSet.ToListAsync();
         }
 
-        public async Task<T> GetById(int id)
+        public IQueryable<T> GetById(int Id)
         {
-            
-            return await _dbSet.FindAsync(id);
+            return _dbSet.Where(entity => EF.Property<int>(entity, "Id") == Id);
         }
 
         public async Task Update(T entity)

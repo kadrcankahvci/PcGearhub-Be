@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 
 namespace PcGearHub.Repos.Implements
 {
-    public class ProductRepository : BaseRepository<Product>, IProductRepository
+    public class ProductRepository : BaseRepository<Product>,IProductRepository
     {
         public ProductRepository(DemodbContext context) : base(context)
         {
+
         }
 
+        
     }
 }
