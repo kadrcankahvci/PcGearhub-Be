@@ -1,4 +1,5 @@
-﻿using PcGearHub.Data.DBModels;
+﻿using Microsoft.EntityFrameworkCore;
+using PcGearHub.Data.DBModels;
 using PcGearHub.Repos.Interfaces;
 using PcGearHub.Services.Interfaces;
 using System;
@@ -34,10 +35,9 @@ namespace PcGearHub.Services.Implements
             return await _repository.GetAll();
         }
 
-        public async Task<T> GetById(int Id)
+        public async Task<T> GetById(int id)
         {
-            var result = await _repository.GetById(Id);
-            return result;
+            return (await _repository.GetById(id)).FirstOrDefault();
         }
 
         public async Task Update(T entity)

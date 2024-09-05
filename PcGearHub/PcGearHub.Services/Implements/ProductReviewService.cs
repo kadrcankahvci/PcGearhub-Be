@@ -11,7 +11,7 @@ namespace PcGearHub.Services.Implements
 {
     public class ProductReviewService : BaseService<ProductReview>, IProductReviewService
     {
-        public ProductReviewService(IRepository<ProductReview> repository) : base(repository)
+        public ProductReviewService(IProductReviewRepository repository) : base(repository)
         {
         }
     }

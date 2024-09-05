@@ -11,7 +11,7 @@ namespace PcGearHub.Services.Implements
 {
     public class RolePermissionService : BaseService<RolePermission>, IRolePermissionService
     {
-        public RolePermissionService(IRepository<RolePermission> repository) : base(repository)
+        public RolePermissionService(IRolePermissionRepository repository) : base(repository)
         {
         }
     }

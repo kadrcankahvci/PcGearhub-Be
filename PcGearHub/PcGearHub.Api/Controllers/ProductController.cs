@@ -1,16 +1,24 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PcGearHub.Data.DBModels;
 using PcGearHub.Services.Interfaces;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-namespace PcGearHub.Api.Controllers
+namespace PcGearHub.Controllers
 {
-    public class ProductController : Controller
+    [ApiController]
+    [Route("api/[controller]/[action]")]
+    public class ProductController : ControllerBase
     {
-        private readonly IProductService _productService;
+        private readonly IBaseService<Product> _productService;
+
+        // Constructor injection for the ProductService
         public ProductController(IProductService productService)
         {
             _productService = productService;
         }
+
         // GET: api/product
         [HttpGet]
         public async Task<ActionResult<List<Product>>> GetAllProducts()
@@ -18,9 +26,69 @@ namespace PcGearHub.Api.Controllers
             var products = await _productService.GetAll();
             return Ok(products);
         }
-        public IActionResult Index()
+
+        // GET: api/product/5
+        [HttpGet("{id}")]
+        public IActionResult GetProductById(int id)
         {
-            return View();
+            // IQueryable sorgusunu al
+            var product = _productService.GetById(id);
+
+            // IQueryable sorgusunu çalıştırarak ilk sonucu al
+            
+
+            if (product == null)
+            {
+                return NotFound(); // Ürün bulunamadıysa 404 döner
+            }
+
+            return Ok(product); // Ürünü döndürür
+        }
+
+        // POST: api/product
+        [HttpPost]
+        public async Task<ActionResult> CreateProduct([FromBody] Product product)
+        {
+            if (product == null)
+            {
+                return BadRequest("Product cannot be null");
+            }
+
+            await _productService.Create(product);
+            return CreatedAtAction(nameof(GetProductById), new { id = product.ProductId }, product);
+        }
+
+        // PUT: api/product/5
+        [HttpPut("{id}")]
+        public async Task<ActionResult> UpdateProduct(int id, [FromBody] Product product)
+        {
+            if (id != product.ProductId)
+            {
+                return BadRequest("ID mismatch");
+            }
+
+            var existingProduct = _productService.GetById(id);
+            if (existingProduct == null)
+            {
+                return NotFound();
+            }
+
+            await _productService.Update(product);
+            return NoContent();
+        }
+
+        // DELETE: api/product/5
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteProduct(int id)
+        {
+            var existingProduct = _productService.GetById(id);
+            if (existingProduct == null)
+            {
+                return NotFound();
+            }
+
+            await _productService.Delete(id);
+            return NoContent();
         }
     }
 }

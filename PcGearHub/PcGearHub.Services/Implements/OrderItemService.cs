@@ -11,7 +11,7 @@ namespace PcGearHub.Services.Implements
 {
     public class OrderItemService : BaseService<OrderItem>, IOrderItemService
     {
-        public OrderItemService(IRepository<OrderItem> repository) : base(repository)
+        public OrderItemService(IOrderItemRepository repository) : base(repository)
         {
         }
     }

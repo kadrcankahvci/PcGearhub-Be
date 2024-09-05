@@ -42,10 +42,9 @@ namespace PcGearHub.Repos.Implements
             return await _dbSet.ToListAsync();
         }
 
-        public async Task<T> GetById(int Id)
+        public virtual async Task<IQueryable<T>> GetById(int id)
         {
-           var result = await _dbSet.FindAsync(Id);
-            return result;
+            return  _dbSet.Where(entity => EF.Property<int>(entity, "Id") == id);
         }
 
         public async Task Update(T entity)
@@ -53,5 +52,7 @@ namespace PcGearHub.Repos.Implements
             _dbSet.Update(entity);
             await _context.SaveChangesAsync();
         }
+
+       
     }
 }

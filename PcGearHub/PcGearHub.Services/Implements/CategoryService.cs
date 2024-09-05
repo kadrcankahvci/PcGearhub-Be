@@ -11,7 +11,7 @@ namespace PcGearHub.Services.Implements
 {
     internal class CategoryService : BaseService<Category>, ICategoryService
     {
-        public CategoryService(IRepository<Category> repository) : base(repository)
+        public CategoryService(ICategoryRepository repository) : base(repository)
         {
         }
     }

@@ -11,7 +11,7 @@ namespace PcGearHub.Services.Implements
 {
     public class LogHistoryService : BaseService<LogHistory>, ILogHistoryService
     {
-        public LogHistoryService(IRepository<LogHistory> repository) : base(repository)
+        public LogHistoryService(ILogHistoryRepository repository) : base(repository)
         {
         }
     }

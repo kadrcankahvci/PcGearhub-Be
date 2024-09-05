@@ -11,7 +11,7 @@ namespace PcGearHub.Services.Implements
 {
     public class PermissionService : BaseService<Permission>, IPermissionService
     {
-        public PermissionService(IRepository<Permission> repository) : base(repository)
+        public PermissionService(IPermissionRepository repository) : base(repository)
         {
         }
     }

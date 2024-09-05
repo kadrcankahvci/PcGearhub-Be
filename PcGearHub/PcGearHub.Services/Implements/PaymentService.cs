@@ -11,7 +11,7 @@ namespace PcGearHub.Services.Implements
 {
     public class PaymentService : BaseService<Payment>, IPaymentService
     {
-        public PaymentService(IRepository<Payment> repository) : base(repository)
+        public PaymentService(IPaymentRepository repository) : base(repository)
         {
         }
     }

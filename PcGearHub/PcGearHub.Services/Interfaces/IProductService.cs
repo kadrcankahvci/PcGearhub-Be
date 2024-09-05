@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace PcGearHub.Services.Interfaces
 {
-    public  interface IProductService :IBaseService<Product>
+    public interface IProductService : IBaseService<Product>
     {
-        Task<List<Product>> SearchProduct(string searchTerm);
+       
     }
 }

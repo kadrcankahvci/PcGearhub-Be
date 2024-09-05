@@ -11,7 +11,7 @@ namespace PcGearHub.Services.Implements
 {
     public class RoleService : BaseService<Role>, IRoleService
     {
-        public RoleService(IRepository<Role> repository) : base(repository)
+        public RoleService(IRoleRepository repository) : base(repository)
         {
         }
     }

@@ -21,7 +21,7 @@ namespace PcGearHub.Repos.DI
                 // DbContext konfigürasyonu
                
                 // Repository konfigürasyonu
-            
+      
             services.AddScoped<IProductRepository,ProductRepository>();
             services.AddScoped<IUserRepository,UserRepository>();
             services.AddScoped<IAddressRespository, AddressRepositry>();
@@ -35,7 +35,7 @@ namespace PcGearHub.Repos.DI
             services.AddScoped<IProductReviewRepository, ProductReviewRepository>();
             services.AddScoped<IRolePermissionRepository, RolePermissionRepository>();
             services.AddScoped<IRoleRepository, RoleRepository>();
-            services.AddScoped<IUserRoleRepository, IUserRoleRepository>();
+            services.AddScoped<IUserRoleRepository, UserRoleRepository>();
 
             // Diğer servis konfigürasyonları burada yapılabilir
         }
