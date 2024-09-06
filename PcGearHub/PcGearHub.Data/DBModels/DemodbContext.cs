@@ -8,7 +8,6 @@ namespace PcGearHub.Data.DBModels;
 
 public partial class DemodbContext : DbContext
 {
-
     public DemodbContext()
     {
     }
@@ -48,7 +47,7 @@ public partial class DemodbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseNpgsql("Persist Security Info=True;Password=changeme;Username=postgres;Database=Demodb;Host=localhost");
+        => optionsBuilder.UseNpgsql("Host=localhost;Database=Demodb;Username=postgres;Password=changeme;Persist Security Info=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -366,6 +365,7 @@ public partial class DemodbContext : DbContext
                 .IsRequired()
                 .HasMaxLength(255);
             entity.Property(e => e.PhoneNumber).HasMaxLength(20);
+            entity.Property(e => e.RoleId).HasDefaultValue(0);
             entity.Property(e => e.UpdatedAt)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasColumnType("timestamp without time zone");

@@ -9,5 +9,6 @@ namespace PcGearHub.Repos.Interfaces
 {
     public interface  IUserRepository : IRepository<User>
     {
+
     }
 }

@@ -48,10 +48,10 @@ namespace PcGearHub.Controllers
                 return BadRequest("User data cannot be null.");
             }
 
-            // Delegate the creation responsibility to the service
+            
             var user = await _userService.CreateUserFromDto(userDto);
 
-            // Return a response with the new user's ID
+           
             return CreatedAtAction(nameof(GetUserById), new { id = user.UserId }, user);
         }
         [HttpPut("{id}")]

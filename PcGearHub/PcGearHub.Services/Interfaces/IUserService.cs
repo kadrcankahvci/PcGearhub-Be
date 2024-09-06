@@ -11,7 +11,13 @@ namespace PcGearHub.Services.Interfaces
     public interface IUserService : IBaseService<User>
     {
         Task<User> CreateUserFromDto(UserDTO userDto);
-        //Task<User> AuthenticateUser(string email, string password);
+        Task<User> AuthenticateUser(string email, string password);
 
+      
+        
+
+
+
+        
     }
 }

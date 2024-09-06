@@ -38,7 +38,8 @@ namespace PcGearHub.Services.DI
             services.AddScoped<IProductReviewService, ProductReviewService>();
             services.AddScoped<IRolePermissionService, RolePermissionService>();
             services.AddScoped<IRoleService, RoleService>();
-           
+            services.AddScoped<IUserRoleService, UserRoleService>();
+
             ReposDI.Init(services);
 
             // Diğer servis konfigürasyonları burada yapılabilir

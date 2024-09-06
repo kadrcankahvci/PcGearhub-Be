@@ -6,10 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PcGearHub.Data;
+using System.Linq.Expressions;
+using PcGearHub.Data.DBModels;
 
 namespace PcGearHub.Repos.Implements
 {
-    public class BaseRepository<T> : IRepository<T> where T : class , new()
+    public class BaseRepository<T> : IRepository<T> where T : class, new()
     {
         protected readonly DbContext _context;
         protected readonly DbSet<T> _dbSet;
@@ -22,8 +24,9 @@ namespace PcGearHub.Repos.Implements
 
         public async Task Create(T entity)
         {
-            await _dbSet.AddAsync(entity);
+         /*   var result = */ await _dbSet.AddAsync(entity); 
             await _context.SaveChangesAsync();
+            //return result;
         }
 
         public async Task Delete(int id)
@@ -42,9 +45,15 @@ namespace PcGearHub.Repos.Implements
             return await _dbSet.ToListAsync();
         }
 
-        public virtual async Task<IQueryable<T>> GetById(int id)
+
+        public IQueryable<T> FindBy(Expression<Func<T, bool>> predicate)
         {
-            return  _dbSet.Where(entity => EF.Property<int>(entity, "Id") == id);
+            return _dbSet.Where(predicate);
+        }
+
+        public  async Task<T> GetById(int id)
+        {
+            return await _dbSet.FindAsync(id);
         }
 
         public async Task Update(T entity)
@@ -54,5 +63,8 @@ namespace PcGearHub.Repos.Implements
         }
 
        
+
+
+
     }
 }

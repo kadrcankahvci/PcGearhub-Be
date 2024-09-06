@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PcGearHub.Data.DBModels;
+using PcGearHub.Services.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +17,6 @@ namespace PcGearHub.Services.Interfaces
         Task Create(T entity);                // Create
         Task Update(T entity);                // Update
         Task Delete(int entity);
-
+        
     }
 }

@@ -14,11 +14,15 @@ namespace PcGearHub.Repos.Implements
         {
             
         }
-        public async Task<User> GetById(int id)
-        {
-            return await (await base.GetById(id)).Include(user => user.Orders) // Kullanıcının siparişlerini dahil et
-                .Include(user => user.Addresses) // Kullanıcının adresini dahil et
-                .Where(user => user.UserId == id).FirstOrDefaultAsync(); // Belirtilen userId'ye göre filtrele
-        }
+
+     
+
+        //public async Task<User> GetById(int id)
+        //{
+        //    return await (await base.GetById(id)).Include(user => user.Orders) // Kullanıcının siparişlerini dahil et
+        //        .Include(user => user.Addresses) // Kullanıcının adresini dahil et
+        //        .Where(user => user.UserId == id).FirstOrDefaultAsync(); // Belirtilen userId'ye göre filtrele
+        //}
+
     }
 }

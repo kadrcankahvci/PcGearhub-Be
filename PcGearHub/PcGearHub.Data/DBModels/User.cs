@@ -9,7 +9,7 @@ public partial class User
 {
     public int UserId { get; set; }
 
-    public string Username { get; set; } 
+    public string Username { get; set; }
 
     public string Password { get; set; }
 
@@ -28,6 +28,8 @@ public partial class User
     public string UpdatedBy { get; set; }
 
     public string UpdatedUser { get; set; }
+
+    public int RoleId { get; set; }
 
     public virtual ICollection<Address> Addresses { get; set; } = new List<Address>();
 
