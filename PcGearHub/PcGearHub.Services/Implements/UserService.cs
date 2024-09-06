@@ -21,17 +21,27 @@ namespace PcGearHub.Services.Implements
             _userRoleRepository = userRoleRepository;
         }
 
-        public async Task<User> AuthenticateUser(string email, string password)
+        public async Task<UserLoginDTO> AuthenticateUser(string email, string password)
         {
             var user = await _repository.FindBy(u => u.Email == email && u.Password == password).FirstOrDefaultAsync();
+
             if (user == null)
             {
-                return null;
+                return null; // Kullanıcı bulunamadı
             }
 
-            // Kullanıcı bulunduysa kullanıcı nesnesini döner
-            return user;
+            var userLoginDTO = new UserLoginDTO
+            {
+             
+                Email = user.Email,
+                Password = user.Password,
+               
+                // Diğer gerekli alanlar
+            };
+
+            return userLoginDTO;
         }
+
 
         public async Task<User> CreateUserFromDto(UserDTO userDto)
         {

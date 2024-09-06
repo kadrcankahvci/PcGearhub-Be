@@ -16,16 +16,16 @@ namespace PcGearHub.Controllers
             _userService = userService;
         }
 
-        [HttpPost("Authenticate")]
-        public async Task<ActionResult> Authenticate([FromBody] UserDTO userDto)
+        [HttpPost]
+        public async Task<ActionResult> Authenticate([FromBody] UserLoginDTO userLoginDTO)
         {
-            if (userDto == null || string.IsNullOrEmpty(userDto.Email) || string.IsNullOrEmpty(userDto.Password))
+            if (userLoginDTO == null || string.IsNullOrEmpty(userLoginDTO.Email) || string.IsNullOrEmpty(userLoginDTO.Password))
             {
                 return BadRequest("Email and password are required.");
             }
 
             // Kullanıcıyı doğrula
-            var user = await _userService.AuthenticateUser(userDto.Email, userDto.Password);
+            var user = await _userService.AuthenticateUser(userLoginDTO.Email, userLoginDTO.Password);
 
             if (user == null)
             {
