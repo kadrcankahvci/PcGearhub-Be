@@ -12,12 +12,16 @@ namespace PcGearHub.Services.Interfaces
     {
         Task<User> CreateUserFromDto(UserDTO userDto);
         Task<UserLoginDTO> AuthenticateUser(string email, string password);
-
-      
-        
+        Task<UserDetailDTO> GetUserDetails(int userId);
 
 
 
-        
+
+
+
+
+
+
+
     }
 }

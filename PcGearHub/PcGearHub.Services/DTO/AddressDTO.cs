@@ -8,7 +8,7 @@ namespace PcGearHub.Services.DTO
 {
     public class AddressDTO
     {
-        public int?  AddressId { get; set; }
+     
 
 
 

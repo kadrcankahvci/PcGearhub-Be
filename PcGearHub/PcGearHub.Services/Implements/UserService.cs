@@ -16,9 +16,15 @@ namespace PcGearHub.Services.Implements
     public class UserService : BaseService<User>, IUserService
     {
         private readonly IUserRoleRepository _userRoleRepository;
-        public UserService(IUserRepository repository, IUserRoleRepository userRoleRepository) : base(repository)
+        private readonly IAddressRespository _addressRespository;
+        private readonly IOrderRepository _orderRepository;
+
+
+        public UserService(IUserRepository repository, IUserRoleRepository userRoleRepository, IAddressRespository addressRespository, IOrderRepository orderRepository) : base(repository)
         {
             _userRoleRepository = userRoleRepository;
+            _addressRespository = addressRespository;
+            _orderRepository = orderRepository;
         }
 
         public async Task<UserLoginDTO> AuthenticateUser(string email, string password)
@@ -41,7 +47,7 @@ namespace PcGearHub.Services.Implements
 
             return userLoginDTO;
         }
-
+      
 
         public async Task<User> CreateUserFromDto(UserDTO userDto)
         {
@@ -84,6 +90,59 @@ namespace PcGearHub.Services.Implements
 
             return user; // Return the created user
         }
+
+        public async Task<UserDetailDTO> GetUserDetails(int userId)
+        {
+            var user = await _repository.FindBy(u => u.UserId == userId).FirstOrDefaultAsync();
+
+            if (user == null)
+            {
+                return null; // Kullanıcı bulunamadı
+            }
+
+            // Kullanıcının adreslerini çek
+            var addresses = await _addressRespository.FindBy(a => a.UserId == user.UserId).ToListAsync();
+            var addressDTOs = addresses.Select(a => new AddressDTO
+            {
+
+                Street = a.Street,
+                City = a.City,
+                State = a.State,
+
+                // Diğer adres alanları
+            }).ToList();
+
+            // Kullanıcının siparişlerini çek
+            var orders = await _orderRepository.FindBy(o => o.UserId == user.UserId).ToListAsync();
+            var orderDTOs = orders.Select(o => new OrderDTO
+            {
+                OrderId = o.OrderId,
+
+                OrderStatus = o.Status,
+                TotalAmount = o.TotalAmount,
+                // Diğer sipariş detayları
+            }).ToList();
+
+            // Kullanıcı bilgilerini oluştur
+            
+
+            return new UserDetailDTO
+            {
+
+                Email = user.Email,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                PhoneNumber = user.PhoneNumber,
+                Addresses = addressDTOs,
+                Orders = orderDTOs
+            };
+        }
+
+
+
+
+
+
 
 
 

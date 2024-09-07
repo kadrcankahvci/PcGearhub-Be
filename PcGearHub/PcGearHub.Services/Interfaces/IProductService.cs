@@ -1,4 +1,5 @@
 ﻿using PcGearHub.Data.DBModels;
+using PcGearHub.Services.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace PcGearHub.Services.Interfaces
 {
     public interface IProductService : IBaseService<Product>
     {
-       
+        Task<Product> CreateProductFromDto(ProductDTO productDTO);
     }
 }

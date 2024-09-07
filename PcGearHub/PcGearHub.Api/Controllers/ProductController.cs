@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PcGearHub.Data.DBModels;
+using PcGearHub.Services.DTO;
 using PcGearHub.Services.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace PcGearHub.Controllers
     [Route("api/[controller]/[action]")]
     public class ProductController : ControllerBase
     {
-        private readonly IBaseService<Product> _productService;
+        private readonly IProductService _productService;
 
         // Constructor injection for the ProductService
         public ProductController(IProductService productService)
@@ -47,15 +48,15 @@ namespace PcGearHub.Controllers
 
         // POST: api/product
         [HttpPost]
-        public async Task<ActionResult> CreateProduct([FromBody] Product product)
+        public async Task<ActionResult> CreateProduct([FromBody] ProductDTO productDTO)
         {
-            if (product == null)
+            if (productDTO == null)
             {
                 return BadRequest("Product cannot be null");
             }
 
-            await _productService.Create(product);
-            return CreatedAtAction(nameof(GetProductById), new { id = product.ProductId }, product);
+      await _productService.CreateProductFromDto(productDTO);
+            return CreatedAtAction(nameof(GetProductById), new { id = productDTO.ProductId }, productDTO);
         }
 
         // PUT: api/product/5
