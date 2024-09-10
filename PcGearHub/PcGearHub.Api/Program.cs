@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using PcGearHub.Data.DBModels;
 using PcGearHub.Services.DI;

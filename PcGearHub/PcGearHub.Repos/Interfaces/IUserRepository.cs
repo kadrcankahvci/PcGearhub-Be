@@ -9,6 +9,6 @@ namespace PcGearHub.Repos.Interfaces
 {
     public interface  IUserRepository : IRepository<User>
     {
-
+        Task<User> GetUserWithAllDetail(int id);
     }
 }

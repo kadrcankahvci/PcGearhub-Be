@@ -14,6 +14,15 @@ namespace PcGearHub.Repos.Implements
         {
             
         }
+        public async Task<User> GetUserWithAllDetail(int id)
+        {
+           var user  =  await _dbSet
+                .Include(x => x.Addresses)
+                .Include(x => x.Orders)
+                .FirstOrDefaultAsync(x=> x.UserId == id);
+
+            return user;               
+        }
 
      
 

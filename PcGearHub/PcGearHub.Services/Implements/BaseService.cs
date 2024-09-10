@@ -37,7 +37,7 @@ namespace PcGearHub.Services.Implements
 
         public async Task<T> GetById(int id)
         {
-            return await (_repository.GetById(id));
+            return await _repository.GetById(id);
         }
 
         public async Task Update(T entity)

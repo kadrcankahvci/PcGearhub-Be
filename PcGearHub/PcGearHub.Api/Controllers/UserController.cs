@@ -5,6 +5,7 @@ using PcGearHub.Services.DTO;
 using PcGearHub.Services.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using PcGearHub.Services.ConvertDTO;
 
 namespace PcGearHub.Controllers
 {
@@ -23,14 +24,14 @@ namespace PcGearHub.Controllers
         public async Task<ActionResult<List<User>>> GetAllUsers()
         {
             var users = await _userService.GetAll();
+
             return Ok(users);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetUserById(int id)
+        public  async Task<IActionResult> GetUserById(int id)
         {
-            var user = _userService.GetById(id);
-           
+            var user = await _userService.GetById(id);           
 
             if (user == null)
             {
@@ -48,11 +49,12 @@ namespace PcGearHub.Controllers
                 return BadRequest("User data cannot be null.");
             }
 
-            
-            var user = await _userService.CreateUserFromDto(userDto);
 
-           
-            return CreatedAtAction(nameof(GetUserById), new { id = user.UserId }, user);
+            var user = await _userService.CreateUserFromDto(userDto);
+            var lutfenolsun = Mapper.ToUserDTO(user);
+
+
+            return CreatedAtAction(nameof(GetUserById), new { id = lutfenolsun.UserId }, lutfenolsun);
         }
         [HttpPut("{id}")]
         public async Task<ActionResult> UpdateUser(int id, [FromBody] User user)
@@ -72,10 +74,10 @@ namespace PcGearHub.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:int}")]
         public async Task<ActionResult> DeleteUser(int id)
         {
-            var existingUser = _userService.GetById(id);
+            var existingUser = await _userService.GetById(id);
             if (existingUser == null)
             {
                 return NotFound();
@@ -83,6 +85,23 @@ namespace PcGearHub.Controllers
 
             await _userService.Delete(id);
             return NoContent();
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetUserDetailsWithOrdersAndAddresses(int id)
+        {
+            var users = await _userService.GetAllIncluding(
+                u => u.Addresses,
+                u => u.Orders
+            );
+
+            var user = users.Find(u => u.UserId == id);
+
+            if (user == null)
+            {
+                return NotFound("User not found.");
+            }
+
+            return Ok(user);
         }
     }
 }

@@ -62,7 +62,17 @@ namespace PcGearHub.Repos.Implements
             await _context.SaveChangesAsync();
         }
 
-       
+        public async Task<List<T>> GetAllIncluding(params Expression<Func<T, object>>[] includeProperties)
+        {
+            IQueryable<T> query = _dbSet;
+            foreach (var includeProperty in includeProperties)
+            {
+                query = query.Include(includeProperty);
+            }
+
+            // Asenkron olarak listeye dönüştürme işlemi
+            return await query.ToListAsync();
+        }
 
 
 

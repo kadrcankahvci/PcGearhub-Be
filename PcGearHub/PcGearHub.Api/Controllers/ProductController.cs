@@ -5,6 +5,7 @@ using PcGearHub.Services.DTO;
 using PcGearHub.Services.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using PcGearHub.Services.ConvertDTO;
 
 namespace PcGearHub.Controllers
 {
@@ -35,9 +36,6 @@ namespace PcGearHub.Controllers
             // IQueryable sorgusunu al
             var product = _productService.GetById(id);
 
-            // IQueryable sorgusunu çalıştırarak ilk sonucu al
-            
-
             if (product == null)
             {
                 return NotFound(); // Ürün bulunamadıysa 404 döner
@@ -55,8 +53,10 @@ namespace PcGearHub.Controllers
                 return BadRequest("Product cannot be null");
             }
 
-      await _productService.CreateProductFromDto(productDTO);
-            return CreatedAtAction(nameof(GetProductById), new { id = productDTO.ProductId }, productDTO);
+           var ab=  await _productService.CreateProductFromDto(productDTO);
+            var deneme = Mapper.ToProductDTO(ab);   
+            
+            return CreatedAtAction(nameof(GetProductById), new { id = deneme.ProductId }, deneme);
         }
 
         // PUT: api/product/5
@@ -69,12 +69,14 @@ namespace PcGearHub.Controllers
             }
 
             var existingProduct = _productService.GetById(id);
+            
             if (existingProduct == null)
             {
                 return NotFound();
             }
 
             await _productService.Update(product);
+
             return NoContent();
         }
 
@@ -89,6 +91,7 @@ namespace PcGearHub.Controllers
             }
 
             await _productService.Delete(id);
+
             return NoContent();
         }
     }

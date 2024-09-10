@@ -7,6 +7,7 @@ using PcGearHub.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,7 +19,6 @@ namespace PcGearHub.Services.Implements
         private readonly IUserRoleRepository _userRoleRepository;
         private readonly IAddressRespository _addressRespository;
         private readonly IOrderRepository _orderRepository;
-
 
         public UserService(IUserRepository repository, IUserRoleRepository userRoleRepository, IAddressRespository addressRespository, IOrderRepository orderRepository) : base(repository)
         {
@@ -38,16 +38,16 @@ namespace PcGearHub.Services.Implements
 
             var userLoginDTO = new UserLoginDTO
             {
-             
+                UserId = user.UserId,
                 Email = user.Email,
                 Password = user.Password,
-               
+                UserRoleId = user.RoleId,
+
                 // Diğer gerekli alanlar
             };
 
             return userLoginDTO;
         }
-      
 
         public async Task<User> CreateUserFromDto(UserDTO userDto)
         {
@@ -63,32 +63,29 @@ namespace PcGearHub.Services.Implements
                 LastName = userDto.LastName,
                 RoleId = 1
 
-
-
-
-
-
             };
             await _repository.Create(user);
 
             var userRole = new UserRole
             {
                 UserId = user.UserId,
-                RoleId = 1 // Assuming 1 is the roleId you want to assign
+                RoleId = 1
             };
 
 
             await _userRoleRepository.Create(userRole);
 
-
-
-
-
-
-
             // Save to the repository or data store
 
             return user; // Return the created user
+        }
+
+        public async Task<List<User>> GetAllIncluding(params Expression<Func<User, object>>[] includeProperties)
+        {
+            return await _repository.GetAllIncluding(
+                 u => u.Addresses,
+                 u => u.Orders
+             );
         }
 
         public async Task<UserDetailDTO> GetUserDetails(int userId)
@@ -123,9 +120,7 @@ namespace PcGearHub.Services.Implements
                 // Diğer sipariş detayları
             }).ToList();
 
-            // Kullanıcı bilgilerini oluştur
-            
-
+            // Kullanıcı bilgilerini oluştur  
             return new UserDetailDTO
             {
 
@@ -138,13 +133,16 @@ namespace PcGearHub.Services.Implements
             };
         }
 
+       
 
 
 
 
+        //public async Task<UserDetailDTO> GetUserDetails(int userId)
+        //{
+        //    _repository.GetUserWithAllDetail
 
-
-
+        //}
 
         //public async Task<UserDTO> GetUserforLogin(UserDTO userDto)
         //{
@@ -159,15 +157,7 @@ namespace PcGearHub.Services.Implements
         //        PhoneNumber = result.PhoneNumber,
         //        FirstName = result.FirstName,
         //        LastName = result.LastName,
-
-
-
-
         //    };
-
         //}
-
-
-
     }
 }

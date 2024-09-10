@@ -13,6 +13,7 @@ namespace PcGearHub.Services.Implements
     public class ProductService : BaseService<Product>,IProductService
     {
         private readonly ICategoryRepository _categoryRepository;
+
         public ProductService(IProductRepository repository, ICategoryRepository categoryRepository) : base(repository)
         {
             _categoryRepository = categoryRepository;
@@ -21,7 +22,7 @@ namespace PcGearHub.Services.Implements
         public async Task<Product> CreateProductFromDto(ProductDTO productDTO)
         {
             // Kategori ID'sine göre Category objesini bul
-            var category = await  _categoryRepository.GetById(productDTO.CategoryId);
+            var category = await _categoryRepository.GetById(productDTO.CategoryId);
 
             if (category == null)
             {
@@ -29,20 +30,26 @@ namespace PcGearHub.Services.Implements
             }
 
             // Product modelini oluştur
-            var product = new Product
-            {
-                Name = productDTO.Name,
-                Description = productDTO.Description,
-                Price = productDTO.Price,
-                StockQuantity = productDTO.StockQuantity,
-               
-                Category = category // İlişkilendirilen Category nesnesi
-            };
+            Product product = DTOtoProduct(productDTO, category);
 
             await _repository.Create(product);
 
             return product;
         }
 
+        private static Product DTOtoProduct(ProductDTO productDTO, Category category) // static olmayabilir!!
+        {
+            var product = new Product
+            {
+                Name = productDTO.Name,
+                Description = productDTO.Description,
+                Price = productDTO.Price,
+                StockQuantity = productDTO.StockQuantity,
+
+                Category = category // İlişkilendirilen Category nesnesi
+            };
+
+            return product;
+        }
     }
 }

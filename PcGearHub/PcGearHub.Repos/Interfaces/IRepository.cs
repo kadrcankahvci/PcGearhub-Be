@@ -19,6 +19,7 @@ namespace PcGearHub.Repos.Interfaces
                                              //
 
         IQueryable<T> FindBy(Expression<Func<T, bool>> predicate);
+        Task<List<T>> GetAllIncluding(params Expression<Func<T, object>>[] includeProperties);
 
     }
 }
