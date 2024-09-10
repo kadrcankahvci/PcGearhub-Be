@@ -6,6 +6,7 @@ using PcGearHub.Services.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using PcGearHub.Services.ConvertDTO;
+using PcGearHub.Services.Implements;
 
 namespace PcGearHub.Controllers
 {
@@ -23,25 +24,28 @@ namespace PcGearHub.Controllers
 
         // GET: api/product
         [HttpGet]
-        public async Task<ActionResult<List<Product>>> GetAllProducts()
+        public async Task<ActionResult<List<ProductDTO>>> GetAllProducts()
         {
             var products = await _productService.GetAll();
-            return Ok(products);
+            var productDTOs = products.Select(Mapper.ToProductDTO).ToList();
+
+            return Ok(productDTOs);
         }
 
         // GET: api/product/5
+
         [HttpGet("{id}")]
-        public IActionResult GetProductById(int id)
+        public async Task<ActionResult> GetProductById(int id)
         {
-            // IQueryable sorgusunu al
-            var product = _productService.GetById(id);
+            var product = await _productService.GetById(id);
+            var dto = Mapper.ToProductDTO(product);
 
             if (product == null)
             {
-                return NotFound(); // Ürün bulunamadıysa 404 döner
+                return NotFound();
             }
 
-            return Ok(product); // Ürünü döndürür
+            return Ok(dto);
         }
 
         // POST: api/product
@@ -52,7 +56,6 @@ namespace PcGearHub.Controllers
             {
                 return BadRequest("Product cannot be null");
             }
-
            var ab=  await _productService.CreateProductFromDto(productDTO);
             var deneme = Mapper.ToProductDTO(ab);   
             
@@ -60,25 +63,28 @@ namespace PcGearHub.Controllers
         }
 
         // PUT: api/product/5
-        [HttpPut("{id}")]
-        public async Task<ActionResult> UpdateProduct(int id, [FromBody] Product product)
+        // PUT: api/product/5
+        [HttpPut]
+        public async Task<ActionResult> UpdateProduct([FromBody] ProductDTO productDTO)
         {
-            if (id != product.ProductId)
+            if (productDTO == null)
             {
-                return BadRequest("ID mismatch");
+                return BadRequest("Invalid product data.");
             }
 
-            var existingProduct = _productService.GetById(id);
-            
+           
+            var existingProduct = await _productService.UpdateProduct(productDTO);
             if (existingProduct == null)
             {
-                return NotFound();
+                return NotFound("Product not found.");
             }
 
-            await _productService.Update(product);
-
-            return NoContent();
+            return Ok(existingProduct);
         }
+
+
+
+
 
         // DELETE: api/product/5
         [HttpDelete("{id}")]

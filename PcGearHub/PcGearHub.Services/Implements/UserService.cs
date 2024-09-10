@@ -133,16 +133,19 @@ namespace PcGearHub.Services.Implements
             };
         }
 
-       
 
 
 
 
-        //public async Task<UserDetailDTO> GetUserDetails(int userId)
-        //{
-        //    _repository.GetUserWithAllDetail
 
-        //}
+        public async Task<User> GetIncluded(int userId)
+        {
+            var query = await _repository.GetIncluded(u => u.Addresses,
+                      u => u.Orders);
+            return await query.FirstOrDefaultAsync(x=>x.UserId == userId);
+            
+
+        }
 
         //public async Task<UserDTO> GetUserforLogin(UserDTO userDto)
         //{

@@ -1,5 +1,6 @@
 ﻿using PcGearHub.Data.DBModels;
 using PcGearHub.Repos.Interfaces;
+using PcGearHub.Services.ConvertDTO;
 using PcGearHub.Services.DTO;
 using PcGearHub.Services.Interfaces;
 using System;
@@ -13,10 +14,12 @@ namespace PcGearHub.Services.Implements
     public class ProductService : BaseService<Product>,IProductService
     {
         private readonly ICategoryRepository _categoryRepository;
+        private readonly IProductRepository _productRepository;
 
         public ProductService(IProductRepository repository, ICategoryRepository categoryRepository) : base(repository)
         {
             _categoryRepository = categoryRepository;
+            _productRepository = repository;
         }
 
         public async Task<Product> CreateProductFromDto(ProductDTO productDTO)
@@ -51,5 +54,44 @@ namespace PcGearHub.Services.Implements
 
             return product;
         }
+        //public async Task<ProductDTO> UpdateProduct (ProductDTO productDTO)
+        //{
+        //    var product = await GetById(productDTO.ProductId);
+        //    if (product is not null)
+        //    {
+
+        //        await Update(Mapper.ToProduct(productDTO));
+        //         product = await GetById(productDTO.ProductId);
+        //        var dto = Mapper.ToProductDTO(product);
+        //        return dto;
+        //    }
+        //    return null;
+
+        //}
+        public async Task<ProductDTO> UpdateProduct(ProductDTO productDTO)
+        {
+            // Ürünü veritabanından alın
+            var product = await GetById(productDTO.ProductId);
+            if (product == null)
+            {
+                return null; // Ürün bulunamadı
+            }
+
+            // Ürünü güncelleyin
+            product.Name = productDTO.Name;
+            product.Description = productDTO.Description;
+            product.Price = productDTO.Price;
+            product.StockQuantity = productDTO.StockQuantity;
+            product.CategoryId = productDTO.CategoryId;
+
+            // Değişiklikleri kaydedin
+            await Update(product);
+
+            // Güncellenmiş ürünü DTO'ya dönüştürüp döndürün
+            var dto = Mapper.ToProductDTO(product);
+            return dto;
+        }
+
+
     }
 }

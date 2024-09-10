@@ -11,5 +11,6 @@ namespace PcGearHub.Services.Interfaces
     public interface IProductService : IBaseService<Product>
     {
         Task<Product> CreateProductFromDto(ProductDTO productDTO);
+        Task<ProductDTO> UpdateProduct(ProductDTO productDTO);
     }
 }

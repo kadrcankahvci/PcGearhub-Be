@@ -89,12 +89,7 @@ namespace PcGearHub.Controllers
         [HttpGet]
         public async Task<IActionResult> GetUserDetailsWithOrdersAndAddresses(int id)
         {
-            var users = await _userService.GetAllIncluding(
-                u => u.Addresses,
-                u => u.Orders
-            );
-
-            var user = users.Find(u => u.UserId == id);
+            var user = await _userService.GetIncluded(id);            
 
             if (user == null)
             {

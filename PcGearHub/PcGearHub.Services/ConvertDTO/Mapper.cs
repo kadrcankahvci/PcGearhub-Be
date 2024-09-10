@@ -34,8 +34,7 @@ namespace PcGearHub.Services.ConvertDTO
                
                 Street = address.Street,
                 City = address.City,
-                State = address.State,
-              
+                State = address.State,              
             };
         }
 
@@ -57,9 +56,36 @@ namespace PcGearHub.Services.ConvertDTO
                 Description = product.Description,
                 Price = product.Price,
                 StockQuantity = product.StockQuantity,
-                CategoryId = product.CategoryId ?? 0,
+                CategoryId = product.CategoryId ?? 1,
             };
         }
-
+        public static Product ToProduct(ProductDTO productdto)
+        {
+            return new Product
+            {
+                ProductId = productdto.ProductId,
+                Name = productdto.Name,
+                Description = productdto.Description,
+                Price = productdto.Price,
+                StockQuantity = productdto.StockQuantity,
+                CategoryId = productdto.CategoryId ,
+            };
+        }
+        public static CategoryDTO ToCategoryDTO(Category category)
+        {
+            return new CategoryDTO
+            {
+              Name = category.Name,
+              CategoryId = category.CategoryId,
+            };
+        }
+        public static Category ToCategory(CategoryDTO categoryDTO)
+        {
+            return new Category
+            {
+                Name= categoryDTO.Name,
+                CategoryId = categoryDTO.CategoryId,
+            };
+        }
     }
 }

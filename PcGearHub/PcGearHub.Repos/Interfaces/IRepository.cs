@@ -16,10 +16,11 @@ namespace PcGearHub.Repos.Interfaces
         Task Create( T entity);                // Create
         Task Update(T entity);                // Update
         Task Delete(int id );                // Delete
-                                             //
+                                          
 
         IQueryable<T> FindBy(Expression<Func<T, bool>> predicate);
         Task<List<T>> GetAllIncluding(params Expression<Func<T, object>>[] includeProperties);
+        Task<IQueryable<T>> GetIncluded(params Expression<Func<T, object>>[] includeProperties);
 
     }
 }
