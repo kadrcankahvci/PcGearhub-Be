@@ -34,7 +34,7 @@ namespace PcGearHub.Controllers
 
         // GET: api/product/5
 
-        [HttpGet("{id}")]
+        [HttpGet]
         public async Task<ActionResult> GetProductById(int id)
         {
             var product = await _productService.GetById(id);
@@ -90,7 +90,7 @@ namespace PcGearHub.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteProduct(int id)
         {
-            var existingProduct = _productService.GetById(id);
+            var existingProduct = await _productService.GetById(id);
             if (existingProduct == null)
             {
                 return NotFound();

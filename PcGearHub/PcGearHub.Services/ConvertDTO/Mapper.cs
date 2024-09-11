@@ -57,6 +57,8 @@ namespace PcGearHub.Services.ConvertDTO
                 Price = product.Price,
                 StockQuantity = product.StockQuantity,
                 CategoryId = product.CategoryId ?? 1,
+                Image= product.Image,
+               
             };
         }
         public static Product ToProduct(ProductDTO productdto)

@@ -28,6 +28,8 @@ public partial class Product
     public string UpdatedUser { get; set; }
 
     public virtual Category Category { get; set; }
+    // Yeni eklenen sütun
+    public string Image { get; set; } 
 
     public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 

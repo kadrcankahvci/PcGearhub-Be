@@ -19,5 +19,6 @@ namespace PcGearHub.Services.DTO
         public int StockQuantity { get; set; }
 
         public int CategoryId { get; set; }
+        public string Image {  get; set; }
     }
 }

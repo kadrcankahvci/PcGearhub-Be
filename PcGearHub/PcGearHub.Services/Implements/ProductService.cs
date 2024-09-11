@@ -48,6 +48,7 @@ namespace PcGearHub.Services.Implements
                 Description = productDTO.Description,
                 Price = productDTO.Price,
                 StockQuantity = productDTO.StockQuantity,
+                Image = productDTO.Image,
 
                 Category = category // İlişkilendirilen Category nesnesi
             };
@@ -83,6 +84,7 @@ namespace PcGearHub.Services.Implements
             product.Price = productDTO.Price;
             product.StockQuantity = productDTO.StockQuantity;
             product.CategoryId = productDTO.CategoryId;
+            product.Image = productDTO.Image;
 
             // Değişiklikleri kaydedin
             await Update(product);
