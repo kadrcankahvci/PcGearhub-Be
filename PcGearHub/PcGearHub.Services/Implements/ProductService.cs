@@ -1,4 +1,5 @@
-﻿using PcGearHub.Data.DBModels;
+﻿using Microsoft.EntityFrameworkCore;
+using PcGearHub.Data.DBModels;
 using PcGearHub.Repos.Interfaces;
 using PcGearHub.Services.ConvertDTO;
 using PcGearHub.Services.DTO;
@@ -94,6 +95,11 @@ namespace PcGearHub.Services.Implements
             return dto;
         }
 
-
+        public async Task<List<Product>> SearchByQuery(string query)
+        {
+            var products = await _repository.GetAll();
+            return products.Where(p => p.Name.Contains(query, StringComparison.OrdinalIgnoreCase) ||
+                                       p.Description.Contains(query, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
     }
 }

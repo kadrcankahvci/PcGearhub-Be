@@ -32,9 +32,10 @@ namespace PcGearHub.Controllers
             return Ok(productDTOs);
         }
 
+
         // GET: api/product/5
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public async Task<ActionResult> GetProductById(int id)
         {
             var product = await _productService.GetById(id);
@@ -82,10 +83,6 @@ namespace PcGearHub.Controllers
             return Ok(existingProduct);
         }
 
-
-
-
-
         // DELETE: api/product/5
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteProduct(int id)
@@ -99,6 +96,25 @@ namespace PcGearHub.Controllers
             await _productService.Delete(id);
 
             return NoContent();
+        }
+        [HttpGet]
+        public async Task<IActionResult> SearchProducts([FromQuery] string query)
+        {
+            if (string.IsNullOrEmpty(query))
+            {
+                return BadRequest("Search query cannot be empty.");
+            }
+
+            // Perform search using service layer
+            var products = await _productService.SearchByQuery(query);
+
+            if (products.Count == 0)
+            {
+                return NotFound("No products found.");
+            }
+
+            var productDTOs = products.Select(Mapper.ToProductDTO).ToList();
+            return Ok(productDTOs);
         }
     }
 }

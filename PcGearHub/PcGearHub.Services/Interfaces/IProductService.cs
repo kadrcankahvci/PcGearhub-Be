@@ -12,5 +12,6 @@ namespace PcGearHub.Services.Interfaces
     {
         Task<Product> CreateProductFromDto(ProductDTO productDTO);
         Task<ProductDTO> UpdateProduct(ProductDTO productDTO);
+        Task<List<Product>> SearchByQuery(string query);
     }
 }
