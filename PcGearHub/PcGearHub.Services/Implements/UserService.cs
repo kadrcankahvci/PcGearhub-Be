@@ -2,6 +2,7 @@
 using PcGearHub.Data.DBModels;
 using PcGearHub.Repos.Implements;
 using PcGearHub.Repos.Interfaces;
+using PcGearHub.Services.ConvertDTO;
 using PcGearHub.Services.DTO;
 using PcGearHub.Services.Interfaces;
 using System;
@@ -75,7 +76,6 @@ namespace PcGearHub.Services.Implements
 
             await _userRoleRepository.Create(userRole);
 
-            // Save to the repository or data store
 
             return user; // Return the created user
         }
@@ -132,6 +132,7 @@ namespace PcGearHub.Services.Implements
                 Orders = orderDTOs
             };
         }
+       
 
 
 
@@ -146,6 +147,29 @@ namespace PcGearHub.Services.Implements
             
 
         }
+
+        public async Task<UserDTO> UpdateUser(UserDTO userDTO)
+        {
+            var existinguser = await GetById(userDTO.UserId);
+            if (existinguser == null)
+            {
+                return null; 
+            }
+            existinguser.Username = userDTO.Username;
+            existinguser.Email = userDTO.Email;
+            existinguser.PhoneNumber = userDTO.PhoneNumber;
+            existinguser.FirstName = userDTO.FirstName;
+            existinguser.LastName = userDTO.LastName;
+            existinguser.Password = userDTO.Password;
+            existinguser.RoleId = userDTO.RoleId;//BURAYI CABIR ABIYE SOR!! 
+            // BUNU YAPMASSAM DBSETIN TRACKED EDILMESINDE PROBLEM CIKIYOR AYNI ANDA 2 TANE USERI TAKIP EDEMEME HATASI ALIYORUM
+            await _repository.Update(existinguser);
+            var dto = Mapper.ToUserDTO(existinguser);
+            return dto;
+
+        }
+
+
 
         //public async Task<UserDTO> GetUserforLogin(UserDTO userDto)
         //{

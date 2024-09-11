@@ -10,6 +10,6 @@ namespace PcGearHub.Services.Interfaces
 {
     public interface ICategoryService : IBaseService<Category>
     {
-    
+        Task<Category> CreateCategory(CategoryDTO categoryDTO);
     }
 }

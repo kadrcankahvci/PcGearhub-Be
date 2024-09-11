@@ -6,6 +6,7 @@ using PcGearHub.Services.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using PcGearHub.Services.ConvertDTO;
+using PcGearHub.Services.Implements;
 
 namespace PcGearHub.Controllers
 {
@@ -48,31 +49,35 @@ namespace PcGearHub.Controllers
             {
                 return BadRequest("User data cannot be null.");
             }
-
-
             var user = await _userService.CreateUserFromDto(userDto);
             var lutfenolsun = Mapper.ToUserDTO(user);
 
 
             return CreatedAtAction(nameof(GetUserById), new { id = lutfenolsun.UserId }, lutfenolsun);
         }
-        [HttpPut("{id}")]
-        public async Task<ActionResult> UpdateUser(int id, [FromBody] User user)
+        [HttpPut]
+        public async Task<ActionResult> UpdateUser([FromBody] UserDTO userDTO)
         {
-            if (id != user.UserId)
+            if (userDTO == null)
             {
-                return BadRequest("ID mismatch");
+                return BadRequest("Invalid product data.");
             }
 
-            var existingUser = _userService.GetById(id);
+
+            var existingUser = await _userService.UpdateUser(userDTO);
             if (existingUser == null)
             {
-                return NotFound();
+                return NotFound("User not found.");
             }
 
-            await _userService.Update(user);
-            return NoContent();
+            return Ok(existingUser);
         }
+          
+
+
+
+          
+        
 
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> DeleteUser(int id)

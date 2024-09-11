@@ -17,6 +17,7 @@ namespace PcGearHub.Services.Interfaces
 
         Task<List<User>> GetAllIncluding(params Expression<Func<User, object>>[] includeProperties);
         Task<User> GetIncluded(int id);
+        Task<UserDTO> UpdateUser(UserDTO userDTO);
 
 
 

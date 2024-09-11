@@ -2,8 +2,10 @@
 using PcGearHub.Services.Interfaces;
 using PcGearHub.Services.DTO;
 using PcGearHub.Services.Implements;
+using PcGearHub.Data.DBModels;
+using PcGearHub.Services.ConvertDTO;
 
-[Route("api/[controller]")]
+[Route("api/[controller]/[action]")]
 [ApiController]
 public class CategoryController : ControllerBase
 {
@@ -14,16 +16,40 @@ public class CategoryController : ControllerBase
         _categoryService = categoryService;
     }
 
-    [HttpGet("GetAllCategories")]
-    public async Task<ActionResult<IEnumerable<CategoryDTO>>> GetAllCategories()
+    
+    [HttpGet]
+    public async Task<ActionResult<List<Category>>> GetAllCategories()
     {
-        var categories = await _categoryService.GetAll();
-        return Ok(categories);
+        var users = await _categoryService.GetAll();
+
+        return Ok(users);
     }
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetCategoryById(int id)
+    {
+        var category = await _categoryService.GetById(id);
 
-  
+        if (category == null)
+        {
+            return NotFound();
+        }
 
-  
+        return Ok(category);
+    }
+    [HttpPost]
+    public async Task<ActionResult<Category>> CreateCategory([FromBody] CategoryDTO categoryDto)
+    {
+        if (categoryDto == null)
+        {
+            return BadRequest("Category data is null");
+        }
+
+        // Kategori oluşturma
+        var createdCategory = await _categoryService.CreateCategory(categoryDto);
+      
+
+        return CreatedAtAction(nameof(GetCategoryById), new { id = createdCategory.CategoryId }, createdCategory);
+    }
 
     [HttpDelete("{id}")]
     public async Task<ActionResult> DeleteCategory(int id)
