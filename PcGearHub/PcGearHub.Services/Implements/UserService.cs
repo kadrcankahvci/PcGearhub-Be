@@ -55,7 +55,6 @@ namespace PcGearHub.Services.Implements
             // Perform the mapping inside the service layer
             var user = new User
             {
-
                 Username = userDto.Username,
                 Password = userDto.Password,
                 Email = userDto.Email,
@@ -63,7 +62,6 @@ namespace PcGearHub.Services.Implements
                 FirstName = userDto.FirstName,
                 LastName = userDto.LastName,
                 RoleId = 1
-
             };
             await _repository.Create(user);
 
@@ -72,10 +70,7 @@ namespace PcGearHub.Services.Implements
                 UserId = user.UserId,
                 RoleId = 1
             };
-
-
             await _userRoleRepository.Create(userRole);
-
 
             return user; // Return the created user
         }
@@ -101,29 +96,23 @@ namespace PcGearHub.Services.Implements
             var addresses = await _addressRespository.FindBy(a => a.UserId == user.UserId).ToListAsync();
             var addressDTOs = addresses.Select(a => new AddressDTO
             {
-
                 Street = a.Street,
                 City = a.City,
                 State = a.State,
-
                 // Diğer adres alanları
             }).ToList();
-
             // Kullanıcının siparişlerini çek
             var orders = await _orderRepository.FindBy(o => o.UserId == user.UserId).ToListAsync();
             var orderDTOs = orders.Select(o => new OrderDTO
             {
                 OrderId = o.OrderId,
-
                 OrderStatus = o.Status,
                 TotalAmount = o.TotalAmount,
                 // Diğer sipariş detayları
             }).ToList();
-
             // Kullanıcı bilgilerini oluştur  
             return new UserDetailDTO
             {
-
                 Email = user.Email,
                 FirstName = user.FirstName,
                 LastName = user.LastName,
@@ -131,13 +120,7 @@ namespace PcGearHub.Services.Implements
                 Addresses = addressDTOs,
                 Orders = orderDTOs
             };
-        }
-       
-
-
-
-
-
+        }    
 
         public async Task<User> GetIncluded(int userId)
         {
@@ -165,6 +148,7 @@ namespace PcGearHub.Services.Implements
             // BUNU YAPMASSAM DBSETIN TRACKED EDILMESINDE PROBLEM CIKIYOR AYNI ANDA 2 TANE USERI TAKIP EDEMEME HATASI ALIYORUM
             await _repository.Update(existinguser);
             var dto = Mapper.ToUserDTO(existinguser);
+            
             return dto;
 
         }

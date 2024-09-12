@@ -15,8 +15,6 @@ namespace PcGearHub.Services.DTO
         public string PhoneNumber { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-         public int RoleId { get; set; }
-
-
+        public int RoleId { get; set; }
     }
 }

@@ -13,5 +13,7 @@ namespace PcGearHub.Services.Interfaces
         Task<Product> CreateProductFromDto(ProductDTO productDTO);
         Task<ProductDTO> UpdateProduct(ProductDTO productDTO);
         Task<List<Product>> SearchByQuery(string query);
-    }
+        //Task<IEnumerable<Product>> SearchProduct(string query);
+        // tum urunleri degil sadece query deki urunleri getiren method daha verimli bir yontem
+    }    
 }

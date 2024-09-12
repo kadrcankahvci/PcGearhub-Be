@@ -17,14 +17,8 @@ namespace PcGearHub.Services.DI
 {
     public static class ServiceDI
     {
-
-
         public static void Init(IServiceCollection services)
-        {
-            // DbContext konfigürasyonu
-
-            // Service konfigürasyonu
-
+        {         
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAddressService, AddressService>();
@@ -41,8 +35,7 @@ namespace PcGearHub.Services.DI
             services.AddScoped<IUserRoleService, UserRoleService>();
 
             ReposDI.Init(services);
-
-            // Diğer servis konfigürasyonları burada yapılabilir
+        
         }
     }
 

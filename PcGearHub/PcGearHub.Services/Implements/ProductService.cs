@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace PcGearHub.Services.Implements
 {
-    public class ProductService : BaseService<Product>,IProductService
+    public class ProductService : BaseService<Product>, IProductService
     {
         private readonly ICategoryRepository _categoryRepository;
         private readonly IProductRepository _productRepository;
@@ -32,7 +32,6 @@ namespace PcGearHub.Services.Implements
             {
                 throw new ArgumentException("Invalid Category ID");
             }
-
             // Product modelini oluştur
             Product product = DTOtoProduct(productDTO, category);
 
@@ -50,7 +49,6 @@ namespace PcGearHub.Services.Implements
                 Price = productDTO.Price,
                 StockQuantity = productDTO.StockQuantity,
                 Image = productDTO.Image,
-
                 Category = category // İlişkilendirilen Category nesnesi
             };
 
@@ -101,5 +99,6 @@ namespace PcGearHub.Services.Implements
             return products.Where(p => p.Name.Contains(query, StringComparison.OrdinalIgnoreCase) ||
                                        p.Description.Contains(query, StringComparison.OrdinalIgnoreCase)).ToList();
         }
+
     }
 }

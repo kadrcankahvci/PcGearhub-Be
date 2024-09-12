@@ -14,7 +14,6 @@ namespace PcGearHub.Services.Interfaces
         Task<User> CreateUserFromDto(UserDTO userDto);
         Task<UserLoginDTO> AuthenticateUser(string email, string password);
         Task<UserDetailDTO> GetUserDetails(int userId);
-
         Task<List<User>> GetAllIncluding(params Expression<Func<User, object>>[] includeProperties);
         Task<User> GetIncluded(int id);
         Task<UserDTO> UpdateUser(UserDTO userDTO);

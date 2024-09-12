@@ -19,19 +19,16 @@ namespace PcGearHub.Services.ConvertDTO
                 Password = user.Password,
                 FirstName = user.FirstName,
                 LastName = user.LastName,
-                PhoneNumber = user.PhoneNumber,
-                       
+                PhoneNumber = user.PhoneNumber,                       
             };
-        }
-     
+        }    
 
         // Address to AddressDTO
         public static AddressDTO ToAddressDTO(Address address)
         {
             return new AddressDTO
             {
-                AddressId = address.AddressId,
-               
+                AddressId = address.AddressId,               
                 Street = address.Street,
                 City = address.City,
                 State = address.State,              
@@ -57,8 +54,7 @@ namespace PcGearHub.Services.ConvertDTO
                 Price = product.Price,
                 StockQuantity = product.StockQuantity,
                 CategoryId = product.CategoryId ?? 1,
-                Image= product.Image,
-               
+                Image= product.Image,               
             };
         }
         public static Product ToProduct(ProductDTO productdto)

@@ -13,11 +13,11 @@ namespace PcGearHub.Services.Implements
     public class BaseService<T> : IBaseService<T> where T : class, new()
     {
         protected readonly IRepository<T> _repository;
-
         public BaseService(IRepository<T> repository)
         {
             _repository = repository;
         }
+
         public async Task Create(T entity)
         {
             await _repository.Create(entity);
@@ -25,13 +25,11 @@ namespace PcGearHub.Services.Implements
 
         public async Task Delete(int id) 
         {
-             await _repository.Delete(id);
-           
+             await _repository.Delete(id);           
         }
 
         public async Task<List<T>> GetAll()
-        {
-                
+        {                
             return await _repository.GetAll();
         }
 

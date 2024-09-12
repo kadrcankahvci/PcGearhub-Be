@@ -26,14 +26,12 @@ namespace PcGearHub.Services.Implements
             {
                 throw new ArgumentNullException(nameof(categoryDTO));
             }
-
             // DTO'dan Entity'ye dönüştürme
             var category = new Category
             {
                 Name = categoryDTO.Name,
                 Description = categoryDTO.Description,
             };
-
             // Veritabanına ekleme
             await _categoryRepository.Create(category);
 

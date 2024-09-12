@@ -14,9 +14,7 @@ public class CategoryController : ControllerBase
     public CategoryController(ICategoryService categoryService)
     {
         _categoryService = categoryService;
-    }
-
-    
+    }    
     [HttpGet]
     public async Task<ActionResult<List<Category>>> GetAllCategories()
     {
@@ -45,8 +43,7 @@ public class CategoryController : ControllerBase
         }
 
         // Kategori oluşturma
-        var createdCategory = await _categoryService.CreateCategory(categoryDto);
-      
+        var createdCategory = await _categoryService.CreateCategory(categoryDto);      
 
         return CreatedAtAction(nameof(GetCategoryById), new { id = createdCategory.CategoryId }, createdCategory);
     }

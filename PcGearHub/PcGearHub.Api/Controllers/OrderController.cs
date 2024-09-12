@@ -48,6 +48,7 @@ namespace PcGearHub.Controllers
             }
 
             await _orderService.Create(order);
+
             return CreatedAtAction(nameof(GetOrderById), new { id = order.OrderId }, order);
         }
 

@@ -15,7 +15,6 @@ namespace PcGearHub.Repos.Implements
     {
         protected readonly DbContext _context;
         protected readonly DbSet<T> _dbSet;
-
         public BaseRepository(DbContext context)
         {
             _context = context;
@@ -39,7 +38,6 @@ namespace PcGearHub.Repos.Implements
             }
         }
 
-
         public async Task<List<T>> GetAll()
         {
             return await _dbSet.ToListAsync();
@@ -61,7 +59,6 @@ namespace PcGearHub.Repos.Implements
             _dbSet.Update(entity);
             await _context.SaveChangesAsync();
         }
-
         public async Task<List<T>> GetAllIncluding(params Expression<Func<T, object>>[] includeProperties)
         {
             IQueryable<T> query = _dbSet;
@@ -82,7 +79,7 @@ namespace PcGearHub.Repos.Implements
             }
 
             // Asenkron olarak listeye dönüştürme işlemi
-            return    query;
+            return query;
         }
 
 

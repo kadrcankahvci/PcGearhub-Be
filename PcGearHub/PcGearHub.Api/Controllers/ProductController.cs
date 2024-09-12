@@ -58,12 +58,12 @@ namespace PcGearHub.Controllers
                 return BadRequest("Product cannot be null");
             }
            var ab=  await _productService.CreateProductFromDto(productDTO);
-            var deneme = Mapper.ToProductDTO(ab);   
+           var deneme = Mapper.ToProductDTO(ab);   
             
             return CreatedAtAction(nameof(GetProductById), new { id = deneme.ProductId }, deneme);
         }
 
-        // PUT: api/product/5
+        
         // PUT: api/product/5
         [HttpPut]
         public async Task<ActionResult> UpdateProduct([FromBody] ProductDTO productDTO)
@@ -92,7 +92,6 @@ namespace PcGearHub.Controllers
             {
                 return NotFound();
             }
-
             await _productService.Delete(id);
 
             return NoContent();

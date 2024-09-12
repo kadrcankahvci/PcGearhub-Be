@@ -30,9 +30,9 @@ namespace PcGearHub.Controllers
         }
 
         [HttpGet("{id}")]
-        public  async Task<IActionResult> GetUserById(int id)
+        public async Task<IActionResult> GetUserById(int id)
         {
-            var user = await _userService.GetById(id);           
+            var user = await _userService.GetById(id);
 
             if (user == null)
             {
@@ -52,7 +52,6 @@ namespace PcGearHub.Controllers
             var user = await _userService.CreateUserFromDto(userDto);
             var lutfenolsun = Mapper.ToUserDTO(user);
 
-
             return CreatedAtAction(nameof(GetUserById), new { id = lutfenolsun.UserId }, lutfenolsun);
         }
         [HttpPut]
@@ -63,7 +62,6 @@ namespace PcGearHub.Controllers
                 return BadRequest("Invalid product data.");
             }
 
-
             var existingUser = await _userService.UpdateUser(userDTO);
             if (existingUser == null)
             {
@@ -72,12 +70,6 @@ namespace PcGearHub.Controllers
 
             return Ok(existingUser);
         }
-          
-
-
-
-          
-        
 
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> DeleteUser(int id)
@@ -87,14 +79,14 @@ namespace PcGearHub.Controllers
             {
                 return NotFound();
             }
-
             await _userService.Delete(id);
+
             return NoContent();
         }
         [HttpGet]
         public async Task<IActionResult> GetUserDetailsWithOrdersAndAddresses(int id)
         {
-            var user = await _userService.GetIncluded(id);            
+            var user = await _userService.GetIncluded(id);
 
             if (user == null)
             {

@@ -16,9 +16,7 @@ namespace PcGearHub.Api.Controllers
         {
             _userService = userService;
         }
-
         [HttpGet]
-
         public async Task<ActionResult<UserDetailDTO>> GetUserProfile(int userId)
         {
             var userDetails = await _userService.GetUserDetails(userId);

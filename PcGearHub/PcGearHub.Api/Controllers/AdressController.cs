@@ -29,8 +29,7 @@ namespace PcGearHub.Controllers
         [HttpGet("{id}")]
         public  IActionResult GetAddressById(int id)
         {
-            var addressQuery =  _addressService.GetById(id);
-            
+            var addressQuery =  _addressService.GetById(id);            
 
             if (addressQuery == null)
             {
@@ -47,7 +46,6 @@ namespace PcGearHub.Controllers
             {
                 return BadRequest("Address data cannot be null.");
             }
-
             // DTO'dan model oluşturma ve kaydetme işlemi
             var address = await _addressService.CreateAddressFromDto(addressDto);
 
@@ -67,8 +65,8 @@ namespace PcGearHub.Controllers
             {
                 return NotFound();
             }
-
             await _addressService.Update(address);
+
             return NoContent();
         }
 
